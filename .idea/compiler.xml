@@ -6,13 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="nearby-earthquakes" />
+        <module name="ict-nearby-earthquakes-sergio-barbero-bascones" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ict-nearby-earthquakes-sergio-barbero-bascones" target="12" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="nearby-earthquakes" options="-parameters" />
+      <module name="ict-nearby-earthquakes-sergio-barbero-bascones" options="-parameters" />
     </option>
   </component>
 </project>
