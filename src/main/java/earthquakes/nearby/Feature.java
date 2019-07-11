@@ -5,10 +5,10 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Objects;
 
 @JsonDeserialize(using = FeatureDeserializer.class)
-public class Feature {
+public final class Feature {
 
-    private String title;
-    private Coordinates coordinates;
+    private final String title;
+    private final Coordinates coordinates;
 
     public Feature(String title, Coordinates coordinates) {
         this.title = title;
@@ -19,16 +19,8 @@ public class Feature {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public Coordinates getCoordinates() {
-        return coordinates;
-    }
-
-    public void setCoordinates(Coordinates coordinates) {
-        this.coordinates = coordinates;
+        return new Coordinates(this.coordinates.getLat(), this.coordinates.getLon());
     }
 
     @Override
