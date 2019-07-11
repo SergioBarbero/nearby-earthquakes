@@ -1,7 +1,6 @@
 package earthquakes.nearby;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectReader;
 import com.google.common.collect.MinMaxPriorityQueue;
 
 import java.io.IOException;
@@ -10,8 +9,8 @@ import java.util.Set;
 
 public class Application {
 
-    static int size = 10;
-    static ObjectMapper mapper = new ObjectMapper();
+    private static int size = 10;
+    private static ObjectMapper mapper = new ObjectMapper();
 
     public static void main(String args[]) {
         try {
