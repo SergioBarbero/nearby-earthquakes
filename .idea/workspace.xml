@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01498520-4e6b-4d86-a2bd-10cffb22d9df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/nearby-earthquakes.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/earthquakes/nearby/Feature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/earthquakes/nearby/Feature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/earthquakes/nearby/SortByProximity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/earthquakes/nearby/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/earthquakes/nearby/Coordinates.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/Feature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="22" column="85" selection-start-line="22" selection-start-column="85" selection-end-line="22" selection-end-column="85" />
+            <state relative-caret-position="270">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#433#434#0" expanded="true" />
@@ -34,10 +35,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="285">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/SortByProximity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#216#217#0" expanded="true" />
+                <element signature="e#262#263#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,6 +62,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/Coordinates.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+              <folding>
+                <element signature="e#1484#1485#0" expanded="true" />
+                <element signature="e#1537#1538#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,14 +111,14 @@
         <option value="$PROJECT_DIR$/src/main/java/earthquakes/nearby/Metadata.java" />
         <option value="$PROJECT_DIR$/src/main/java/earthquakes/nearby/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/earthquakes/nearby/Properties.java" />
-        <option value="$PROJECT_DIR$/src/main/java/earthquakes/nearby/SortByProximity.java" />
         <option value="$PROJECT_DIR$/src/main/java/earthquakes/nearby/Geometry.java" />
         <option value="$PROJECT_DIR$/src/main/java/earthquakes/nearby/EarthquakesInformation.java" />
         <option value="$PROJECT_DIR$/src/main/java/earthquakes/nearby/FeatureDeserializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/earthquakes/nearby/Application.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/earthquakes/nearby/Coordinates.java" />
         <option value="$PROJECT_DIR$/src/main/java/earthquakes/nearby/Feature.java" />
+        <option value="$PROJECT_DIR$/src/main/java/earthquakes/nearby/Coordinates.java" />
+        <option value="$PROJECT_DIR$/src/main/java/earthquakes/nearby/SortByProximity.java" />
       </list>
     </option>
   </component>
@@ -154,7 +181,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562793981304" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562828645218" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -318,7 +345,6 @@
     <entry file="file://$PROJECT_DIR$/file.json" />
     <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/Geometry.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/Properties.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/SortByProximity.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar!/com/fasterxml/jackson/databind/deser/std/CollectionDeserializer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -327,16 +353,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/qweqwe.iml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -344,10 +360,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/Coordinates.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/Feature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+        <state relative-caret-position="270">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -368,16 +391,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/Feature.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="22" column="85" selection-start-line="22" selection-start-column="85" selection-end-line="22" selection-end-column="85" />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1067#1068#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/Coordinates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1537#1538#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/earthquakes/nearby/SortByProximity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#216#217#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
           </folding>
         </state>
       </provider>
