@@ -14,8 +14,8 @@ public class Application {
 
     public static void main(String args[]) {
         try {
-            double lat = Double.parseDouble(args[0]);
-            double lon = Double.parseDouble(args[1]);
+            double lat =  Math.floor(Double.parseDouble(args[0]) * 100d) / 100d;
+            double lon =  Math.floor(Double.parseDouble(args[1]) * 100d) / 100d;
             checkClosestFeatures(lat, lon);
         } catch (NumberFormatException e) {
             System.out.println("Error, Please, provide numeric latitude and longitude");
