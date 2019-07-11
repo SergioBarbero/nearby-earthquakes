@@ -7,7 +7,6 @@ import java.util.Set;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Earthquakes {
 
-    private Coordinates reference;
     private Set<Feature> features;
 
     public Set<Feature> getFeatures() {

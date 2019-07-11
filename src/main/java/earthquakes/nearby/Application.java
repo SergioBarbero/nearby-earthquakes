@@ -1,28 +1,42 @@
 package earthquakes.nearby;
 
-import com.fasterxml.jackson.core.JsonFactory;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sun.source.tree.Tree;
+import com.fasterxml.jackson.databind.ObjectReader;
+import com.google.common.collect.MinMaxPriorityQueue;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class Application {
 
+    static int size = 10;
     static ObjectMapper mapper = new ObjectMapper();
 
     public static void main(String args[]) {
-        Coordinates reference = new Coordinates(40.730610, -73.935242);
-        String url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
-        JsonFactory jsonFactory = new JsonFactory();
-        Earthquakes information = null;
         try {
-            Set<Feature> features = new ObjectMapper().readValue(new URL(url), Earthquakes.class).getFeatures();
-            TreeSet<Feature> top = new TreeSet<Feature>(new SortByProximity(reference));
+            double lat = Double.parseDouble(args[0]);
+            double lon = Double.parseDouble(args[1]);
+            checkClosestFeatures(lat, lon);
+        } catch (NumberFormatException e) {
+            System.out.println("Error, Please, provide numeric latitude and longitude");
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Error, Please, provide latitude and longitude");
+        }
+    }
+
+    public static void checkClosestFeatures(double lat, double lon) {
+        Coordinates reference = new Coordinates(lat, lon);
+        String url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
+        try {
+            Set<Feature> features = mapper.readValue(new URL(url), Earthquakes.class).getFeatures();
+            MinMaxPriorityQueue<Feature> top = MinMaxPriorityQueue.orderedBy(new SortByProximity(reference)).maximumSize(size).create();
             top.addAll(features);
+
+            Feature last;
+            while((last = top.poll()) != null) {
+                System.out.println(last.getTitle() + " || " + reference.calculateDistanceTo(last.getCoordinates()));
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

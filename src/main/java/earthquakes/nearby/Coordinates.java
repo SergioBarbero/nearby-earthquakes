@@ -30,6 +30,11 @@ public class Coordinates {
         this.lon = lon;
     }
 
+    /**
+     * Calculates distance to passed Coordinates by haversine formula
+     * @param coordinates Coordinates to get distance with
+     * @return distance between Coordinates
+     */
     public double calculateDistanceTo(Coordinates coordinates) {
         double dLat  = Math.toRadians((this.lat - coordinates.lat));
         double dLong = Math.toRadians((this.lon - coordinates.lon));
