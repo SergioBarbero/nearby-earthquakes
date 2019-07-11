@@ -12,8 +12,8 @@ public class SortByProximity implements Comparator<Feature> {
 
     @Override
     public int compare(Feature o1, Feature o2) {
-        Double distance1 = reference.calculateDistanceTo(o1.getCoordinates());
-        Double distance2 = reference.calculateDistanceTo(o2.getCoordinates());
+        double distance1 = reference.calculateDistanceTo(o1.getCoordinates());
+        double distance2 = reference.calculateDistanceTo(o2.getCoordinates());
         return Double.compare(distance1, distance2);
     }
 }
