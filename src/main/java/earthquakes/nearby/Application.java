@@ -34,7 +34,7 @@ public class Application {
 
             Feature last;
             while((last = top.poll()) != null) {
-                System.out.println(last.getTitle() + " || " + reference.calculateDistanceTo(last.getCoordinates()));
+                System.out.println(last.getTitle() + " || " + (int) reference.calculateDistanceTo(last.getCoordinates()));
             }
         } catch (IOException e) {
             e.printStackTrace();
