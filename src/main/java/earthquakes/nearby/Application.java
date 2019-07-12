@@ -1,14 +1,10 @@
 package earthquakes.nearby;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.type.CollectionType;
-import com.fasterxml.jackson.databind.type.TypeFactory;
-import com.google.common.collect.MinMaxPriorityQueue;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
-import java.util.Set;
 
 public class Application {
 
