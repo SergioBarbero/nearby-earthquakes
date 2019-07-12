@@ -14,6 +14,6 @@ public class RendererFeatureDistance implements Renderer {
 
     @Override
     public void render() {
-        earthquakes.stream().forEach(f -> System.out.println(f.getTitle() + " | " + f.getCoordinates().calculateDistanceTo(reference)));
+        earthquakes.stream().forEach(f -> System.out.println(f.getTitle() + " || " + (int) f.getCoordinates().calculateDistanceTo(reference)));
     }
 }
