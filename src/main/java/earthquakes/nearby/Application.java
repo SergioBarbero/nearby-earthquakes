@@ -28,9 +28,8 @@ public class Application {
         String url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
         try {
             Earthquakes earthquakes = mapper.readValue(new URL(url), Earthquakes.class);
-            earthquakes.setReference(reference);
 
-            List<Feature> closestEarthquakes = earthquakes.getNClosestFeatures(size);
+            List<Feature> closestEarthquakes = earthquakes.getNClosestFeatures(reference, size);
             new RendererFeatureDistance(closestEarthquakes, reference).render();
         } catch (IOException e) {
             e.printStackTrace();
