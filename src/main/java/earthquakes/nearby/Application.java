@@ -1,15 +1,11 @@
 package earthquakes.nearby;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.IOException;
-import java.net.URL;
 import java.util.List;
 
 public class Application {
 
     private static int size = 10;
-    private static ObjectMapper mapper = new ObjectMapper();
 
     public static void main(String args[]) {
         try {
@@ -25,12 +21,10 @@ public class Application {
 
     public static void printClosestFeaturesTo(double lat, double lon) {
         Coordinates reference = new Coordinates(lat, lon);
-        String url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
         try {
-            Earthquakes earthquakes = mapper.readValue(new URL(url), Earthquakes.class);
-
-            List<Feature> closestEarthquakes = earthquakes.getNClosestFeatures(reference, size);
-            new RendererFeatureDistance(closestEarthquakes, reference).render();
+            NearestEarthquakes ne = new NearestEarthquakes(USGSEarthquakes.initializeEarthQuakes());
+            List<Feature> nearest10Features = ne.getNClosestFeatures(reference, size);
+            nearest10Features.stream().forEach(f -> System.out.println(f.getTitle() + " || " + (int) reference.calculateDistanceTo(f.getCoordinates())));
         } catch (IOException e) {
             e.printStackTrace();
         }
