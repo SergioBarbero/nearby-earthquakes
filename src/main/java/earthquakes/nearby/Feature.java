@@ -20,7 +20,7 @@ public final class Feature {
     }
 
     public Coordinates getCoordinates() {
-        return new Coordinates(this.coordinates.getLat(), this.coordinates.getLon());
+        return this.coordinates;
     }
 
     @Override

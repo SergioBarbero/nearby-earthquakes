@@ -2,12 +2,12 @@ package earthquakes.nearby;
 
 import java.util.Objects;
 
-public class Coordinates {
+public final class Coordinates {
 
     private static final int EARTH_RADIUS = 6371;
 
-    private double lat;
-    private double lon;
+    private final double lat;
+    private final double lon;
 
     public Coordinates(double lat, double lon) {
         this.lat = lat;
@@ -18,16 +18,8 @@ public class Coordinates {
         return lat;
     }
 
-    public void setLat(double lat) {
-        this.lat = lat;
-    }
-
     public double getLon() {
         return lon;
-    }
-
-    public void setLon(double lon) {
-        this.lon = lon;
     }
 
     /**
