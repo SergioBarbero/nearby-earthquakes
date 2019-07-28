@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ict-nearby-earthquakes-sergio-barbero-bascones" />
+        <module name="nearby-earthquakes" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ict-nearby-earthquakes-sergio-barbero-bascones" target="12" />
+      <module name="nearby-earthquakes" target="12" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

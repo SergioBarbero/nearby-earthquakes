@@ -8,7 +8,7 @@ import java.util.Queue;
 
 public class NearestEarthquakes {
 
-    Earthquakes earthquakes;
+    private Earthquakes earthquakes;
 
     public NearestEarthquakes(Earthquakes earthquakes) {
         this.earthquakes = earthquakes;

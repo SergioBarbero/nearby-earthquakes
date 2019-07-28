@@ -24,8 +24,6 @@ public class FeatureDeserializer extends StdDeserializer<Feature> {
         String title = root.get("properties").get("title").asText();
         double lat = root.get("geometry").get("coordinates").get(1).asDouble();
         double lon = root.get("geometry").get("coordinates").get(0).asDouble();
-        Coordinates coord = new Coordinates(lat, lon);
-
-        return new Feature(title, coord);
+        return new Feature(title, new Coordinates(lat, lon));
     }
 }
